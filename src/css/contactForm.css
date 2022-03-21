@@ -1,0 +1,134 @@
+#ContactForm {
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+#ContactForm.visible {
+    opacity: 1;
+}
+
+.formWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#formToSubmit {
+    margin: 0 10px 20px 10px;
+    width: 600px;
+    max-width: 90%;
+}
+
+#formToSubmit > button, .loadingButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    background-color: #6aa84f;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#formToSubmit > button:hover {
+    background-color: #274e13;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.loadingButton > .loadingIcon {
+    animation: rotation 2s infinite ease-in;
+}
+
+.formPart {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.formPart > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formPart > input {
+    border: none;
+    border: solid 1px grey; 
+    width: 600px;
+    max-width: 100%;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+.formPart > textarea {
+    width: 600px;
+    max-width: 100% !important;
+    height: 150px !important;
+    resize: none;
+    overflow-y: auto;
+    line-height: 24px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+.messageBoxWrap {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    top: 0;
+}
+
+.messageBoxWrap.sendClick {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.boxShow {
+    opacity: 1 !important;
+}
+
+.messageBoxWrap.noSend {
+    opacity: 0 !important;
+}
+
+.messageBox {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+}
+
+.messageBox.sendSuccess {
+    background-color: rgba(214, 255, 216, 0.8);
+}
+
+.messageBox.sendFail {
+    background-color: rgba(250, 224, 224, 0.8);
+}
+
+.messageClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 20px 10px;
+}
+
+.contactInfoBox {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 20px 0;
+}
+
+.contactInfoBox:last-child {
+    margin-right: 0;
+}
+
+.contactInfoBox > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}

@@ -1,0 +1,42 @@
+#About {
+    margin: 40px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutWrap {
+    display: grid;
+    grid-gap: 20px;
+    width: 700px;
+    max-width:95%;
+    grid-template-columns: auto auto;
+}
+
+.aboutMeWrap {
+    max-width: 500px;
+}
+
+.shortIntro {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 28px;
+}
+
+.mySkills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mySkills > span {
+    margin: 0 15px 15px 0;
+    padding: 10px 10px 10px 10px;
+}
+
+.mySkills > .eachMySkill {
+    margin: 0 15px 15px 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff2cc;
+}

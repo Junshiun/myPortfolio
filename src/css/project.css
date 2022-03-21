@@ -1,0 +1,205 @@
+.projectWrap {
+    margin: 0 0 60px 0;
+    width: 100%;
+    max-width: 1500px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.projectWrap.visible {
+    opacity: 1;
+}
+
+.projectMain {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    padding: 0 10px 0 10px;
+}
+
+.projectScreenshot {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.projectScreenshot > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectDescriptionWrap {
+    margin-left: 20px;
+    /*max-height: 450px;*/
+    position: relative;
+}
+
+.projectDescription {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.projectTitle {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectSkills > .eachSkill {
+    margin: 15px 15px 0 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff2cc;
+}
+
+.projectOverview {
+    text-align: justify;
+    padding: 0 10px 30px 0;
+    flex-grow: 1;
+}
+
+.projectOverview > p {
+    line-height: 32px;
+}
+
+.projectLink {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectLinkMobile {
+    display: none;
+}
+
+.projectLink > a, 
+.projectLinkMobile > a {
+    color: black;
+    text-decoration: none;
+}
+
+.liveBox {
+    box-shadow: 5px 5px 5px grey;
+    padding: 10px 10px 10px 10px;
+}
+
+.gitBox {
+    box-shadow: 5px 5px 5px grey;
+    padding: 10px 10px 10px 10px;
+}
+
+.openDescription {
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+
+    .projectScreenshot {
+       max-width: 58%;
+    }
+
+    .openDescription {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 10px;
+        padding: 10px 10px 10px 10px;
+        transform: rotate(270deg);
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    .projectMain {
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .projectDescriptionWrap {
+        width: 100%;
+    }
+
+    .expand .openDescription {
+        left: -37px;
+    }
+
+    .projectDescription {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        background-color: white;
+        padding: 20px 0 10px 10px;
+        transition: width 0.2s linear;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+
+    .collapse.projectDescription {
+        overflow-x: hidden;
+    }
+
+    .expand.projectDescription {
+        width: 80vw;
+        max-width: 80vw;
+        overflow-y: unset !important;
+    }
+
+    .expand .fadeBox {
+        display: none;
+    }
+
+    .expand .skillsTitle {
+        opacity: 1;
+    }
+
+    .expand .projectOverview {
+        opacity: 1;
+    }
+
+    .projectLink {
+        display: none;
+    }
+
+    .projectLinkMobile {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skillsTitle {
+        opacity: 0.3;
+    }
+
+    .projectOverview {
+        opacity: 0.3;
+    }
+
+    .projectOverview > p {
+        line-height: 28px;
+    }
+
+    .fadeBox {
+        position: absolute;
+        bottom: 0;
+        width: 130px;
+        height: 80%;
+        background: linear-gradient(to left, transparent, white);    
+        overflow: hidden;
+    }
+}

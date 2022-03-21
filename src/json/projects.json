@@ -1,0 +1,18 @@
+[
+    {
+        "Title": "Shopping",
+        "Image": "shop.png",
+        "Skills": ["React", "Javascript", "CSS", "HTML", "Stripe", "Nodejs"],
+        "Overview": "Products are fetched from Fakestore API and categorized into 4 categories. With filter system applied, highlighted products will be shown on main page. Cart will be updated synchronously for checkout purposes. Stripe API is used as payment platform with Nodejs as server side" ,
+        "Live": "https://junshiun.github.io/shopping/",
+        "Github": "https://github.com/Junshiun/shopping"
+    },
+    {
+        "Title": "Look for Movies",
+        "Image": "movie.png",
+        "Skills": ["Javascript", "CSS", "HTML"],
+        "Overview": "A pure javascript project for users to search for movies. All data are fetched from The Movie Database (TMDB). An overview will be shown for each movie on main page and more details are provided by clicking movie's title." ,
+        "Live": "https://junshiun.github.io/look-for-movies/",
+        "Github": "https://github.com/Junshiun/look-for-movies"
+    }
+]

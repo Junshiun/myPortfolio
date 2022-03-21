@@ -1,0 +1,114 @@
+#introductionMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width:100% !important;
+    min-height: 100vh;
+}
+
+.introContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.coverPhoto {
+    display: flex;
+    justify-content: center;
+}
+
+.coverPhoto > img {
+    max-width: 400px;
+}
+
+.selfPhotoBox {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.selfPhoto {
+    width: 100%;
+    object-fit: contain;
+    margin-left: 3px;
+}
+
+.selfIntro {
+    padding: 10px 0 0 0;
+}
+
+.selfIntro span {
+    display: flex;
+    align-items: center;
+}
+
+.selfIntro h1 {
+    font-size: 18px;
+}
+
+.selfIntro h2 {
+    font-size: 15px;
+    opacity: 0.2;
+}
+
+.selfIntro h2:last-child {
+    margin-left: 10px;
+}
+
+.selfIntro h2:first-child {
+    margin-right: 10px;
+}
+
+.selfIntro p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.aboutMeMain {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMeWrap {
+    margin: 50px 10px 0 10px;
+    padding: 0 10px 0 10px;
+    max-width: 500px;
+}
+
+.shortIntro {
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 28px;
+}
+
+.mySkills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mySkills > span {
+    margin: 0 15px 15px 0;
+    padding: 10px 10px 10px 10px;
+}
+
+.mySkills > .eachMySkill {
+    margin: 0 15px 15px 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff2cc;
+}
+
+@media screen and (max-width: 700px){
+    .coverPhoto > img {
+        max-width: 50%;
+    }
+}
