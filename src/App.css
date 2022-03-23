@@ -5,4 +5,13 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.pageMain {
+    margin: 8px;
 }

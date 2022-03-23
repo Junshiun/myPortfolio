@@ -1,8 +1,41 @@
 .smallProjects {
-    max-width: 1500px;
+    max-width: 1000px;
     width: 100%;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 30px 10px;
     overflow-x: hidden;
+}
+
+.smallProjectsWrap {
+    transition: height 2s linear;
+    overflow: hidden;
+}
+
+.smallProjectsWrap.hide {
+    height: 0 !important;
+    overflow: hidden;
+}
+
+.smallProjectsHeight {
+    box-sizing: border-box;
+}
+
+.showMore {
+    display: flex;
+    justify-content: center;
+}
+
+.showMoreBtn {
+    border: none;
+    background-color: #134f5c;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.showMoreBtn:hover {
+    background-color: #0c343d;
 }
 
 .smallProject {
@@ -12,9 +45,11 @@
     margin-bottom: 50px;
 }
 
+/*
 .smallProject:last-child {
     margin-bottom: 30px;
 }
+*/
 
 .smallProject.visible {
     opacity: 1;

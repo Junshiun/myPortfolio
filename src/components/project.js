@@ -61,9 +61,9 @@ export const Project = (props) => {
                         </div>
                         <ProjectLink class="projectLink" live={project.Live} github={project.Github}/>
                         <div className="fadeBox"></div>
-                        <div className="openDescription" onClick={() => {setexpand(!expand)}}>{expand===true? <VscArrowDown></VscArrowDown>
+                        <button className="openDescription" onClick={() => {setexpand(!expand)}}>{expand===true? <VscArrowDown></VscArrowDown>
                         :
-                        <BiExpandAlt></BiExpandAlt>}</div>
+                        <BiExpandAlt></BiExpandAlt>}</button>
                     </div>
                 </div>
             </div>

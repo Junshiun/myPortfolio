@@ -1,13 +1,35 @@
 #introductionMain {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     max-width:100% !important;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+.forAnimation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: solid 100vh transparent;
+    border-bottom: solid 100vh white;
+    z-index: 1;
+    transform: scale(0);
+    transition: transform 2s linear;
+    transform-origin: bottom right;
+}
+
+.forAnimation.animate {
+    /*width: 200vh;*/
+    transform: scale(3);
 }
 
 .introContent {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -25,13 +47,43 @@
     max-width: 400px;
 }
 
-.selfPhotoBox {
+.selfPhotoWrap {
+    position: relative;
     width: 160px;
     height: 160px;
-    overflow: hidden;
-    box-shadow: 5px 5px 5px grey;
-    border-radius: 50%;
     margin-right: 30px;
+}
+
+.selfPhotoBox, .selfPhotoShadow {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.selfPhotoShadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 8px grey;
+    /*transition: transform 10s linear;*/
+
+    animation: shadowRotation 10s infinite linear;
+    animation-play-state: paused;
+}
+
+@keyframes shadowRotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.selfPhotoShadow:hover {
+    animation-play-state: running;
 }
 
 .selfPhoto {
@@ -80,6 +132,7 @@
     margin: 50px 10px 0 10px;
     padding: 0 10px 0 10px;
     max-width: 500px;
+    color: #444444;
 }
 
 .shortIntro {
@@ -104,7 +157,11 @@
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     font-size: 14px;
-    background-color: #fff2cc;
+    background-color: #ffe599;
+}
+
+.mySkills > .eachMySkill:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 700px){

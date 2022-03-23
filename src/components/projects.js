@@ -7,7 +7,7 @@ export const Projects = () => {
 
     return (
         <div>
-            <h1 className="Title">PROJECTS</h1>
+            <h1 id="Projects" className="Title">Recent Works</h1>
             <div className="projectMaster">
                 {data.map((project) => {
                     return <Project project={project} key={project.Title} />

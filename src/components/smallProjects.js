@@ -3,6 +3,7 @@ import { Calculator } from "./calculator";
 import { Drum } from "./drum";
 import '../css/smallProjects.css'
 import { SmallProject } from "./smallProject";
+import { useState, useEffect } from "react"
 
 const projects = [
     {
@@ -27,12 +28,37 @@ const projects = [
 
 export const SmallProjects = () => {
 
+    const [showMore, setShowMore] = useState(false);
+
+    const [height, setHeight] = useState(0);
+
+    const showFunction = () => {
+        setShowMore(!showMore);
+
+        document.querySelector(".smallProjectsWrap").style.height = height + "px";
+    }
+
+    useEffect(() => {
+
+        setHeight(document.querySelector(".smallProjectsHeight").clientHeight + 30);
+
+        document.querySelector(".smallProjectsWrap").style.height = height + "px";
+        
+    })
+
     return (
         <div className="smallProjects">
-            {projects.map((project) => {
-            
-                return <SmallProject component={project.component} key={project.title} project={project}/>
-            })}
+            <div className={"smallProjectsWrap " + ((showMore===true)? "show" : "hide")}>
+                <div className="smallProjectsHeight">
+                    {projects.map((project) => {
+                    
+                        return <SmallProject component={project.component} key={project.title} project={project}/>
+                    })}
+                </div>
+            </div>
+            <div className="showMore">
+                <button className="showMoreBtn" onClick={showFunction}>{(showMore===true)? "Show Less":"Show More"}</button>
+            </div>
         </div>
     )
 }

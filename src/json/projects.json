@@ -11,7 +11,7 @@
         "Title": "Look for Movies",
         "Image": "movie.png",
         "Skills": ["Javascript", "CSS", "HTML"],
-        "Overview": "A pure javascript project for users to search for movies. All data are fetched from The Movie Database (TMDB). An overview will be shown for each movie on main page and more details are provided by clicking movie's title." ,
+        "Overview": "A Vanilla javascript project for users to search for movies. All data are fetched from The Movie Database (TMDB). An overview will be shown for each movie on main page and more details are provided by clicking movie's title." ,
         "Live": "https://junshiun.github.io/look-for-movies/",
         "Github": "https://github.com/Junshiun/look-for-movies"
     }

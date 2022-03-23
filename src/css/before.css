@@ -1,0 +1,82 @@
+.beforeMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    max-width:100% !important;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.animateBox {
+    position: relative;
+    background: url("../images/running01.png");
+    height: 256px;
+    width: calc(1280px / 5);
+    animation: animate 1s steps(5) infinite;
+    transform: scale(.5);
+}
+
+@keyframes animate {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: 1280px;
+    }
+}
+
+.animateDots {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.dotBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.dotBox:not(:last-child){
+    margin-right: 20px;
+}
+
+.dotOne, .dotTwo, .dotThree {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #bcbcbc;
+    animation: dotAnimate 1s infinite ease-in;
+}
+
+@keyframes dotAnimate {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.dotTwo {
+    animation-delay: .25s;
+}
+
+.dotThree {
+    animation-delay: .5s;
+}
