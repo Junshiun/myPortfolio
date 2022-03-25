@@ -30,21 +30,26 @@ export const SmallProjects = () => {
 
     const [showMore, setShowMore] = useState(false);
 
-    const [height, setHeight] = useState(0);
+    //const [height, setHeight] = useState(0);
 
     const showFunction = () => {
         setShowMore(!showMore);
 
-        document.querySelector(".smallProjectsWrap").style.height = height + "px";
+        //document.querySelector(".smallProjectsWrap").style.height = height + "px";
     }
 
     useEffect(() => {
 
-        setHeight(document.querySelector(".smallProjectsHeight").clientHeight + 30);
+        document.querySelector(".smallProjectsWrap").style.height =  document.querySelector(".smallProjectsHeight").clientHeight + "px";
 
-        document.querySelector(".smallProjectsWrap").style.height = height + "px";
-        
-    })
+        window.addEventListener("resize", () => {
+            let measured = document.querySelector(".smallProjectsHeight").clientHeight;
+
+            document.querySelector(".smallProjectsWrap").style.height = document.querySelector(".smallProjectsHeight").clientHeight + "px";
+
+            //console.log(document.querySelector(".smallProjectsHeight").clientHeight)
+        })
+    }, [])
 
     return (
         <div className="smallProjects">

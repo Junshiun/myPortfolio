@@ -15,10 +15,6 @@
     overflow: hidden;
 }
 
-.smallProjectsHeight {
-    box-sizing: border-box;
-}
-
 .showMore {
     display: flex;
     justify-content: center;
@@ -45,11 +41,14 @@
     margin-bottom: 50px;
 }
 
-/*
-.smallProject:last-child {
-    margin-bottom: 30px;
+.smallProject:first-child {
+    padding-top: 30px;
 }
-*/
+
+.smallProject:last-child {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
 
 .smallProject.visible {
     opacity: 1;
@@ -113,4 +112,13 @@
         width: 90px;
         padding: 10px 10px 10px 10px;
     }
+}
+
+@media screen and (max-width: 400px){
+
+    /*
+    .smallProjectsWrap.show ~ .showMore {
+        margin-top: 20px;
+    }
+    */
 }
