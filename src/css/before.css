@@ -57,7 +57,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid #bcbcbc;
+    border: 4px solid #bcbcbc;
     animation: dotAnimate 1s infinite ease-in;
 }
 

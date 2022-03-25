@@ -1,4 +1,5 @@
 #ContactForm {
+    position: relative;
     opacity: 0;
     transition: opacity 2s linear;
 }
@@ -14,6 +15,7 @@
 }
 
 #formToSubmit {
+    position: relative;
     margin: 0 10px 20px 10px;
     width: 600px;
     max-width: 90%;
@@ -34,7 +36,7 @@
 }
 
 #formToSubmit > button:hover {
-    background-color: #274e13;
+    background-color: #38761d;
 }
 
 @keyframes rotation {
@@ -59,15 +61,25 @@
 .formPart > label {
     display: block;
     margin-bottom: 10px;
+    color: grey;
 }
 
 .formPart > input {
     border: none;
-    border: solid 1px grey; 
+    /*border: solid 1px grey; */
     width: 600px;
     max-width: 100%;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
+}
+
+.formPart > label[required]::after {
+    content: " *";
+}
+
+.formPart > input:focus,
+.formPart > textarea:focus {
+    outline: 1px solid #bcbcbc;
 }
 
 .formPart > textarea {
@@ -79,6 +91,7 @@
     line-height: 24px;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
+    border: none;
 }
 
 .messageBoxWrap {
@@ -132,4 +145,18 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+.formBackground {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 0;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-image: url("../images/yellow.jpg");
+    background-repeat: none;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 10px;
 }

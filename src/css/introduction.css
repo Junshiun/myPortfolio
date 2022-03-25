@@ -7,6 +7,11 @@
     max-width:100% !important;
     min-height: 100vh;
     overflow: hidden;
+    /*
+    background-image: url("../images/white.jpg");
+    background-repeat: none;
+    background-size: cover;
+    */
 }
 
 .forAnimation {
@@ -68,7 +73,7 @@
     box-shadow: 5px 5px 8px grey;
     /*transition: transform 10s linear;*/
 
-    animation: shadowRotation 10s infinite linear;
+    animation: shadowRotation 8s infinite linear;
     animation-play-state: paused;
 }
 
@@ -84,6 +89,7 @@
 
 .selfPhotoShadow:hover {
     animation-play-state: running;
+    box-shadow: 5px 5px 8px #e3cd89;
 }
 
 .selfPhoto {
@@ -156,7 +162,7 @@
     margin: 0 15px 15px 0;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 13px;
     background-color: #ffe599;
 }
 

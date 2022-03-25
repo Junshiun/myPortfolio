@@ -6,7 +6,7 @@ import { SmallProjects } from "./smallProjects"
 export const Projects = () => {
 
     return (
-        <div>
+        <div className="projectsSection">
             <h1 id="Projects" className="Title">Recent Works</h1>
             <div className="projectMaster">
                 {data.map((project) => {

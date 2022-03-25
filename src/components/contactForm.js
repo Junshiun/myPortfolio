@@ -48,7 +48,7 @@ export const ContactForm = () => {
             body: JSON.stringify(formData)
         };
 
-        const response = await fetch('http://localhost:4000/email', requestOptions).then((res) => {
+        const response = await fetch('https://blooming-badlands-87075.herokuapp.com/email', requestOptions).then((res) => {
             if (res.ok)
                 return (res.json())
             else
@@ -81,11 +81,11 @@ export const ContactForm = () => {
             <div className="formWrap">
                 <form id="formToSubmit" onSubmit={(e) => {submitForm(e)}}>
                     <div className="formPart">
-                        <label htmlFor="sender">Name</label>
+                        <label htmlFor="sender" required>Name</label>
                         <input id="sender" type="text" required></input>
                     </div>
                     <div className="formPart">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email" required>Email</label>
                         <input id="email" required></input>
                     </div>
                     <div className="formPart">
@@ -93,10 +93,11 @@ export const ContactForm = () => {
                         <input id="subject" type="text"></input>
                     </div>
                     <div className="formPart">
-                        <label htmlFor="message">Message</label>
+                        <label htmlFor="message" required>Message</label>
                         <textarea id="message" required></textarea>
                     </div>
-                    {(loading==true)? <div className="loadingButton"><AiOutlineLoading className="loadingIcon"></AiOutlineLoading></div>:<button type="submit">Send</button>}            
+                    {(loading==true)? <div className="loadingButton"><AiOutlineLoading className="loadingIcon"></AiOutlineLoading></div>:<button type="submit">Send</button>}   
+                    <div className="formBackground"></div>         
                 </form>
             </div>
             <div id="messageBoxWrap" className={"messageBoxWrap " + (sendClick===true? "sendClick":"noSend")}>
