@@ -48,7 +48,7 @@ export const ContactForm = () => {
             body: JSON.stringify(formData)
         };
 
-        const response = await fetch('https://blooming-badlands-87075.herokuapp.com/email', requestOptions).then((res) => {
+        const response = await fetch('https://blooming-badlands-87075.herokuapp.com/emai', requestOptions).then((res) => {
             if (res.ok)
                 return (res.json())
             else
@@ -77,7 +77,7 @@ export const ContactForm = () => {
 
     return (
         <div id="ContactForm" className={((visible===true)? "visible":"hide")} ref={containerRef}>
-            <h1 className="Title">Send Me a Message</h1>
+            <h1 className="Title">send me A message</h1>
             <div className="formWrap">
                 <form id="formToSubmit" onSubmit={(e) => {submitForm(e)}}>
                     <div className="formPart">

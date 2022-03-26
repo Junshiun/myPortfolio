@@ -15,11 +15,11 @@
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .Calculator button {
-  height: 35px;
+  height: 2.1875rem;
   border-radius: 50px !important;
   border: none;
   background-color: var(--button-color);
@@ -31,18 +31,18 @@
   display: block;
   width: fit-content;
   background-color: var(--background-color);
-  padding: 0 20px 20px 20px;
+  padding: 0 1.25rem 1.25rem 1.25rem;
   border-radius: 5px;
 }
 
 .container-one {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .container-one, .container-two {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 120px 120px 120px 120px;
+  grid-gap: 1.25rem;
+  grid-template-columns: 11.25rem 11.25rem 11.25rem 11.25rem;
 }
 
 .Calculator #display {
@@ -52,9 +52,9 @@
   grid-column: 1 / span 4;
   background-color: var(--button-color);
   color: var(--display-font);
-  height: 40px;
-  padding-right: 10px;
-  border-radius: 10px;
+  height: 2.5rem;
+  padding-right: 0.625rem;
+  border-radius: 0.625rem;
 }
 
 #equals {
@@ -107,11 +107,11 @@
   grid-column: 1;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
 
   .container-one, .container-two {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 55px 55px 55px 55px;
+    grid-gap: 1.25rem;
+    grid-template-columns: 3.4375rem 3.4375rem 3.4375rem 3.4375rem;
   }
 }

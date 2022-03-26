@@ -1,7 +1,7 @@
 .smallProjects {
-    max-width: 1000px;
+    max-width: 68.75rem;
     width: 100%;
-    margin: 0 10px 30px 10px;
+    margin: 0 0 1.875rem 0;
     overflow-x: hidden;
 }
 
@@ -15,6 +15,10 @@
     overflow: hidden;
 }
 
+.smallProjectsWrap.show ~ .showMore {
+    margin-top: 0.625rem;
+}
+
 .showMore {
     display: flex;
     justify-content: center;
@@ -23,9 +27,9 @@
 .showMoreBtn {
     border: none;
     background-color: #134f5c;
-    border-radius: 10px;
-    width: 100px;
-    height: 40px;
+    border-radius: 0.625rem;
+    width: 6.25rem;
+    height: 2.5rem;
     color: white;
     cursor: pointer;
 }
@@ -38,16 +42,19 @@
     opacity: 0;
     width: 100%;
     transition: opacity 2s ease-out;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
+    background-color: white;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
 }
 
 .smallProject:first-child {
-    padding-top: 30px;
+    padding-top: 1.875rem;
 }
 
 .smallProject:last-child {
     margin-bottom: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .smallProject.visible {
@@ -57,40 +64,40 @@
 /*
 .smallProjectHead {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     align-items: center;
 }
 */
 
 .smallProjectHead {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .smallProjectTitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
 }
 
 .skillsBar {
     display: flex;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 /*.skillsBar > .eachSkill*/
 .smallProjectHead > .eachSkill {
-    margin: 0 0 10px 10px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
+    margin: 0 0 0.625rem 0.625rem;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+    border-radius: 0.625rem;
     font-size: 13px;
     background-color: #cfe2f3;
 }
 
 .smallProjectLink {
-    margin-top: 20px;
-    padding-right: 20px;
+    margin-top: 1.25rem;
+    padding-right: 1.25rem;
     display: flex;
     justify-content: right;
 }
@@ -102,15 +109,15 @@
 @media screen and (max-width: 700px){
 
     .smallProjectLink {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         display: flex;
         justify-content: space-around;
         padding: 0;
     }
 
     .emptyBox {
-        width: 90px;
-        padding: 10px 10px 10px 10px;
+        width: 5.625rem;
+        padding: 0.625rem 0.625rem 0.625rem 0.625rem;
     }
 }
 
@@ -118,7 +125,7 @@
 
     /*
     .smallProjectsWrap.show ~ .showMore {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     */
 }

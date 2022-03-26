@@ -1,6 +1,6 @@
 html {
     scroll-behavior:smooth;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 4.375rem;
 }
 
 .navMain {
@@ -10,7 +10,7 @@ html {
     top: 0;
     right: 0;
     z-index: 2;
-    padding: 10px;
+    padding: 0.625rem;
     width: 100%;
 }
 
@@ -29,7 +29,7 @@ html {
     align-items: center;
     transition: transform .2s linear;
     transform-origin: top;
-    padding: 0 10px 0 10px;
+    padding: 0 0.625rem 0 0.625rem;
 }
 
 .navBar.show {
@@ -48,7 +48,7 @@ html {
 .navBar > a {
     text-decoration: none;
     color: #0c343d;
-    padding: 0 10px 0 10px;
+    padding: 0 0.625rem 0 0.625rem;
 }
 
 .navBar > a:not(:last-child) {
@@ -61,7 +61,7 @@ html {
 }
 
 .resume > .resumeIcon {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
 }
 
 .navIcon {
@@ -71,19 +71,19 @@ html {
     cursor: pointer;
     background-color: white;
     border-radius: 50%;
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 @media screen and (max-width: 550px){
 
     html {
-        scroll-padding-top: 20px;
+        scroll-padding-top: 1.25rem;
     }
 
     .navMain {
         flex-direction: column;
         align-items: flex-end;
-        padding: 10px 10px 10px 10px;
+        padding: 0.625rem 0.625rem 0.625rem 0.625rem;
         width: fit-content;
         height: 100%;
     }
@@ -98,7 +98,7 @@ html {
         justify-content: right;
         align-items: center;
         transform-origin: right;
-        padding: 10px;
+        padding: 0.625rem;
         order: 2;
     }
     
@@ -111,7 +111,7 @@ html {
     }
     
     .navBar > a {
-        padding: 10px 0 10px 0;
+        padding: 1rem 0 1rem 0;
     }
     
     .navBar > a:not(:last-child) {
@@ -121,6 +121,6 @@ html {
 
     .navIcon {
         order: 1;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 }

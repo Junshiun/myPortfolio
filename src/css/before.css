@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100vw;
     max-width:100% !important;
-    min-height: 100vh;
+    min-height: 80vh;
     box-sizing: border-box;
 }
 

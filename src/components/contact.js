@@ -7,7 +7,7 @@ import { FaGithubSquare } from "react-icons/fa"
 export const Contact = () => {
     return (
         <div id="Contact">
-            <h1 className="Title">Get in Touch</h1>
+            <h1 className="Title">Get in touch</h1>
             <div className="contactInfo">
                 <div className="contactInfoBox">
                     <MdEmail></MdEmail>

@@ -1,6 +1,7 @@
 import "../css/introduction.css"
 import self from "../images/JS.jpg"
 import { useState } from "react"
+import { IoMdHand } from "react-icons/io"
 
 import { useEffect } from "react"
 
@@ -36,7 +37,7 @@ export const Introduction = () => {
                     <div className="selfIntro">
                         <span>
                             <h2 className="tagFront"></h2>
-                            <h1 id="selfIntroHead">Hi, I am Jun Shiun</h1>
+                            <h1 id="selfIntroHead">Hi<IoMdHand className="wavingHand"></IoMdHand>I am Jun Shiun</h1>
                             <h2 className="tagEnd"></h2>
                         </span>
                         <p>

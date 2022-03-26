@@ -12,12 +12,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 0 0.625rem 0 0.625rem;
 }
 
 #formToSubmit {
     position: relative;
-    margin: 0 10px 20px 10px;
-    width: 600px;
+    margin: 0 0.625rem 1.25rem 0.625rem;
+    width: 37.5rem;
     max-width: 90%;
 }
 
@@ -29,9 +30,9 @@
     background-color: #6aa84f;
     color: white;
     border: none;
-    width: 60px;
-    height: 40px;
-    border-radius: 10px;
+    width: 3.75rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
     cursor: pointer;
 }
 
@@ -54,22 +55,22 @@
 }
 
 .formPart {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     width: 100%;
 }
 
 .formPart > label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: grey;
 }
 
 .formPart > input {
     border: none;
     /*border: solid 1px grey; */
-    width: 600px;
+    width: 37.5rem;
     max-width: 100%;
-    padding: 10px 10px 10px 10px;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
     box-sizing: border-box;
 }
 
@@ -83,13 +84,13 @@
 }
 
 .formPart > textarea {
-    width: 600px;
+    width: 37.5rem;
     max-width: 100% !important;
     height: 150px !important;
     resize: none;
     overflow-y: auto;
-    line-height: 24px;
-    padding: 10px 10px 10px 10px;
+    line-height: 1.5rem;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
     box-sizing: border-box;
     border: none;
 }
@@ -107,7 +108,7 @@
 .messageBoxWrap.sendClick {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     max-width: 100%;
     opacity: 0;
     transition: opacity 2s linear;
@@ -124,12 +125,12 @@
 .messageBox {
     position: relative;
     display: flex;
-    width: 400px;
-    height: 200px;
+    width: 25rem;
+    height: 12.5rem;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px 20px 20px;
-    border-radius: 20px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 1.25rem;
 }
 
 .messageBox.sendSuccess {
@@ -142,21 +143,21 @@
 
 .messageClose {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
     cursor: pointer;
 }
 
 .formBackground {
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -1.25rem;
+    left: -1.25rem;
     right: 0;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
+    width: calc(100% + 2.5rem);
+    height: calc(100% + 2.5rem);
     background-image: url("../images/yellow.jpg");
     background-repeat: none;
     background-size: cover;
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }

@@ -7,11 +7,19 @@
     max-width:100% !important;
     min-height: 100vh;
     overflow: hidden;
-    /*
-    background-image: url("../images/white.jpg");
+}
+
+#introductionMain::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-repeat: none;
     background-size: cover;
-    */
 }
 
 .forAnimation {
@@ -56,7 +64,7 @@
     position: relative;
     width: 160px;
     height: 160px;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .selfPhotoBox, .selfPhotoShadow {
@@ -66,11 +74,15 @@
     overflow: hidden;
 }
 
+.selfPhotoBox {
+    background-color: white;
+}
+
 .selfPhotoShadow {
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: 5px 5px 8px grey;
+    box-shadow: 0.3125rem 0.3125rem 0.5rem grey;
     /*transition: transform 10s linear;*/
 
     animation: shadowRotation 8s infinite linear;
@@ -89,17 +101,18 @@
 
 .selfPhotoShadow:hover {
     animation-play-state: running;
-    box-shadow: 5px 5px 8px #e3cd89;
+    box-shadow: 0.3125rem 0.3125rem 0.5rem #e3cd89;
 }
 
 .selfPhoto {
     width: 100%;
     object-fit: contain;
-    margin-left: 3px;
+    margin-left: 0.1875rem;
 }
 
 .selfIntro {
-    padding: 10px 0 0 0;
+    padding: 0.625rem 0 0 0;
+    color: white;
 }
 
 .selfIntro span {
@@ -108,25 +121,47 @@
 }
 
 .selfIntro h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
+    display: block;
 }
 
 .selfIntro h2 {
-    font-size: 15px;
+    font-size: 0.9375rem;
     opacity: 0.2;
 }
 
 .selfIntro h2:last-child {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 .selfIntro h2:first-child {
-    margin-right: 10px;
+    margin-right: 0.625rem;
+}
+
+.wavingHand {
+    margin: 0 1rem 0 1rem;
+    transform-origin: bottom center;
+    animation: waving 2s infinite;
+}
+
+@keyframes waving {
+    0% {
+        transform: rotate(-40deg);
+    }
+    20% {
+        transform: rotate(40deg);
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
 }
 
 .selfIntro p {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .aboutMeMain {
@@ -135,16 +170,16 @@
 }
 
 .aboutMeWrap {
-    margin: 50px 10px 0 10px;
-    padding: 0 10px 0 10px;
-    max-width: 500px;
-    color: #444444;
+    margin: 3.125rem 0.625rem 0 0.625rem;
+    padding: 0 0.625rem 0 0.625rem;
+    max-width: 31.25rem;
+    color: #eeeeee;
 }
 
 .shortIntro {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: justify;
-    line-height: 28px;
+    line-height: 1.75rem;
 }
 
 .mySkills {
@@ -154,16 +189,18 @@
 }
 
 .mySkills > span {
-    margin: 0 15px 15px 0;
-    padding: 10px 10px 10px 10px;
+    margin: 0 0.9375rem 0.9375rem 0;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
 }
 
 .mySkills > .eachMySkill {
-    margin: 0 15px 15px 0;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    font-size: 13px;
-    background-color: #ffe599;
+    margin: 0 0.9375rem 0.9375rem 0;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+    border-radius: 0.625rem;
+    font-size: 0.75rem;
+    background-color: white;
+    border: 1px solid #134f5c;
+    color: #134f5c;
 }
 
 .mySkills > .eachMySkill:hover {

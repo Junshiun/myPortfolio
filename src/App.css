@@ -6,13 +6,15 @@
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 body {
     margin: 0;
 }
 
+/*
 .pageMain {
-    margin: 8px;
+    margin: 0.5rem;
 }
+*/
