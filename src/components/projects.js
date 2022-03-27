@@ -9,9 +9,11 @@ export const Projects = () => {
         <div className="projectsSection">
             <h1 id="Projects" className="Title">recent Works</h1>
             <div className="projectMaster">
-                {data.map((project) => {
-                    return <Project project={project} key={project.Title} />
-                })}
+                <div className="projectHighlight">
+                    {data.map((project) => {
+                        return <Project project={project} key={project.Title} />
+                    })}
+                </div>
                 <SmallProjects />
             </div>
         </div>

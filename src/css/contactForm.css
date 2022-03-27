@@ -2,6 +2,22 @@
     position: relative;
     opacity: 0;
     transition: opacity 2s linear;
+    padding-bottom: 0.625rem;
+}
+
+#ContactForm::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: black;
+}
+
+#ContactForm .Title {
+    color: #999999;
 }
 
 #ContactForm.visible {
@@ -155,9 +171,13 @@
     right: 0;
     width: calc(100% + 2.5rem);
     height: calc(100% + 2.5rem);
+    /*
     background-image: url("../images/yellow.jpg");
     background-repeat: none;
     background-size: cover;
+    */
+
+    background-color: #f5faff;;
     z-index: -1;
     border-radius: 0.625rem;
 }

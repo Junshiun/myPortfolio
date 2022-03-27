@@ -3,9 +3,7 @@ import React from 'react';
 import { AiFillTwitterCircle } from 'react-icons/ai'
 
 const first_colors_array = [
-  "#073763",
-  "#4c1130",
-  "#660000"
+  "#0d1f2f"
 ]
 
 const colors_array = [

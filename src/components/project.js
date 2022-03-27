@@ -1,4 +1,3 @@
-import sample from '../images/screenshotsample.png'
 import '../css/project.css'
 import { VscGithub, VscArrowDown } from 'react-icons/vsc'
 import { BiExpandAlt } from 'react-icons/bi'
@@ -30,10 +29,10 @@ export const Project = (props) => {
     const ProjectLink = (props) => {
         return (
             <div className={props.class}>
-                <a className="liveBox" href={props.live} target="_blank">
+                <a className="liveBox" href={props.live} target="_blank" rel="noreferrer">
                                 View Project
                 </a>
-                <a className="gitBox" href={props.github} target="_blank">
+                <a className="gitBox" href={props.github} target="_blank" rel="noreferrer">
                     <VscGithub style={{marginRight: "10px"}}></VscGithub>GitHub
                 </a>
             </div>

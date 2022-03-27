@@ -1,5 +1,5 @@
 .smallProjects {
-    max-width: 68.75rem;
+    max-width: 60rem;
     width: 100%;
     margin: 0 0 1.875rem 0;
     overflow-x: hidden;
@@ -43,7 +43,7 @@
     width: 100%;
     transition: opacity 2s ease-out;
     margin-bottom: 3.125rem;
-    background-color: white;
+    background-color: var(--projectBackColor);
     padding: 0.625rem;
     border-radius: 0.625rem;
 }
@@ -91,8 +91,10 @@
     margin: 0 0 0.625rem 0.625rem;
     padding: 0.625rem 0.625rem 0.625rem 0.625rem;
     border-radius: 0.625rem;
-    font-size: 13px;
-    background-color: #cfe2f3;
+    font-size: 0.625rem;
+    color: #134f5c;
+    border: 1px solid #134f5c;
+    background-color: white;
 }
 
 .smallProjectLink {

@@ -9,7 +9,8 @@
     overflow: hidden;
 }
 
-#introductionMain::before {
+#introductionMain::before
+/*#introductionMain::after*/ {
     content: "";
     z-index: -1;
     position: absolute;
@@ -17,9 +18,40 @@
     width: 100%;
     top: 0;
     left: 0;
+    /*
     background-image: url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-repeat: none;
     background-size: cover;
+    */
+    background-size: 200% 200%;
+    /*
+    background-image: linear-gradient(45deg,
+     black, #0d1321, #101b32, #0d1f2f,
+     black, #0d1321, #101b32, #0d1f2f,
+     #0d1f2f,#0d1321, #101b32, black);
+     */
+     /*
+     background-image: linear-gradient(45deg,
+     black, #0d1321, #101b32, #0d1f2f,
+     black, #0d1321, #101b32, #0d1f2f,
+     black, #0d1321);*/
+
+     background-image: linear-gradient(45deg,
+     black, #0d1321, #101b32, #0d1f2f, #15314a, #0d1f2f,
+     black, #0d1321, #101b32, #0d1f2f, #15314a, #0d1f2f,
+     black);
+     animation: back 20s infinite linear; 
+}
+
+@keyframes back {
+    0% {
+        opacity: 1;
+        background-position: left bottom;
+    }
+    100% {
+        opacity: 1;
+        background-position: right top;
+    }
 }
 
 .forAnimation {
@@ -62,8 +94,8 @@
 
 .selfPhotoWrap {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 10rem;
+    height: 10rem;
     margin-right: 1.875rem;
 }
 
@@ -72,18 +104,19 @@
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
+    filter: brightness(90%);
 }
 
 .selfPhotoBox {
     background-color: white;
 }
 
+/*
 .selfPhotoShadow {
     position: absolute;
     top: 0;
     left: 0;
     box-shadow: 0.3125rem 0.3125rem 0.5rem grey;
-    /*transition: transform 10s linear;*/
 
     animation: shadowRotation 8s infinite linear;
     animation-play-state: paused;
@@ -102,7 +135,7 @@
 .selfPhotoShadow:hover {
     animation-play-state: running;
     box-shadow: 0.3125rem 0.3125rem 0.5rem #e3cd89;
-}
+*/
 
 .selfPhoto {
     width: 100%;
@@ -112,12 +145,13 @@
 
 .selfIntro {
     padding: 0.625rem 0 0 0;
-    color: white;
+    color: #999999;
 }
 
 .selfIntro span {
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .selfIntro h1 {
@@ -142,6 +176,7 @@
     margin: 0 1rem 0 1rem;
     transform-origin: bottom center;
     animation: waving 2s infinite;
+    color: white;
 }
 
 @keyframes waving {
@@ -173,7 +208,7 @@
     margin: 3.125rem 0.625rem 0 0.625rem;
     padding: 0 0.625rem 0 0.625rem;
     max-width: 31.25rem;
-    color: #eeeeee;
+    color: #999999;
 }
 
 .shortIntro {
