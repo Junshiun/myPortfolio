@@ -40,7 +40,7 @@
      black, #0d1321, #101b32, #0d1f2f, #15314a, #0d1f2f,
      black, #0d1321, #101b32, #0d1f2f, #15314a, #0d1f2f,
      black);
-     animation: back 20s infinite linear; 
+     animation: back 17s infinite linear; 
 }
 
 @keyframes back {

@@ -44,13 +44,15 @@
     transition: opacity 2s ease-out;
     margin-bottom: 3.125rem;
     background-color: var(--projectBackColor);
-    padding: 0.625rem;
+    padding: 1rem;
     border-radius: 0.625rem;
 }
 
+/*
 .smallProject:first-child {
     padding-top: 1.875rem;
 }
+*/
 
 .smallProject:last-child {
     margin-bottom: 0;
@@ -77,7 +79,7 @@
 }
 
 .smallProjectTitle {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 0.625rem;
 }
 

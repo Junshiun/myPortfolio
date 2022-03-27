@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export const Nav = () => {
 
-    const [showNav, setShowNav] = useState((window.innerWidth >= 700)? true:false);
+    const [showNav, setShowNav] = useState(false); //useState((window.innerWidth >= 700)? true:false);
 
     return (
         <div className={"navMain " + (showNav? "show":"hide")}>
