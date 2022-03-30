@@ -14,6 +14,10 @@ export const Project = (props) => {
 
     const [visible, setvisible] = useState(false);
 
+    const [progress, setprogress] = useState({
+        "--width": "0%"
+    });
+
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             const [entry] = entries;
@@ -24,6 +28,10 @@ export const Project = (props) => {
         })
     
         observer.observe(containerRef.current);
+
+        if (project.State!==undefined)
+            setprogress({"--width": (project.Progress===undefined)?  "0%" : project.Progress})
+            
     }, [])
 
     const ProjectLink = (props) => {
@@ -40,10 +48,28 @@ export const Project = (props) => {
     }
 
     return (
+        (project.State!==undefined)?
+        <div id={project.Title} className={"projectWrap comingSoon " + ((visible===true)? "visible":"hide")} ref={containerRef}>
+            <div className="comingSoonTitle">
+                coming soon
+                <div className="comingSoonBar" style={progress}>
+                </div>
+            </div>
+            <div className="commingSoonSkills">
+                {project.Skills.map((skill) => {
+                    return (
+                        <div className="comingSoonSkill" key={project.Title + "-skills-" + skill}>
+                            {skill}
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+        :
         <div id={project.Title} className={"projectWrap " + ((visible===true)? "visible":"hide")} ref={containerRef}>
             <div className="projectMain">
                 <div className="projectScreenshot">
-                    <img src={require("../images/" + project.Image)} alt="project screenshot"></img>
+                    <img src={project.Image} alt={project.AltImage}></img>
                 </div>
                 <div className="projectDescriptionWrap">
                     <div className={"projectDescription " + (expand===true? "expand":"collapse")}>

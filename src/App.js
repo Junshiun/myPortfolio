@@ -1,17 +1,22 @@
 import './App.css';
 import { Introduction } from './components/introduction' 
+import { AboutMe } from './components/aboutMe'
 import { Projects } from './components/projects'
 import { Contact } from './components/contact'
 import { ContactForm } from './components/contactForm'
 import { Before } from './components/before'
 import { Nav } from './components/nav'
 import { useEffect, useState } from 'react';
+import { ContentContext } from './context/context'
 
 function App() {
 
   const [animate, setAnimate] = useState(true);
 
+  const { loadingState } = ContentContext();
+
   useEffect(() => {
+
     setTimeout(() => {
       setAnimate(false);
     }, 4000)
@@ -19,16 +24,17 @@ function App() {
 
   return (
     <div className="App">
-      {animate?
-      <Before />
-      :
+      {((loadingState===false) && (animate===false))?
       <div className="pageMain">
-      <Nav />
-      <Introduction />
-      <Projects />
-      <ContactForm />
-      <Contact />
+        <Nav />
+        <Introduction />
+        <AboutMe />
+        <Projects />
+        <ContactForm />
+        <Contact />
       </div>
+      :
+      <Before />
       }
     </div>
   );

@@ -1,5 +1,13 @@
 :root {
     --projectBackColor: white;
+    /*--scroll-track: #134f5c;
+    --scroll-thumb: #f3f6f4;
+    --scroll-thumb-hover: #eeeeee;*/
+    --scroll-track: #bcbcbc;
+    --scroll-thumb: #134f5c;
+    --scroll-thumb-hover: #0c343d;
+    --font-size-text: 0.8rem;
+    --line-height-text: 2rem;
 }
 
 @font-face {

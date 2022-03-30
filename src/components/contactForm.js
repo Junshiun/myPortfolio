@@ -1,6 +1,6 @@
 import "../css/contactForm.css"
 import { useState, useEffect, useRef } from "react";
-import { AiFillCloseCircle, AiOutlineLoading} from "react-icons/ai"
+import { AiFillCloseCircle, AiOutlineLoading, AiFillMessage} from "react-icons/ai"
 
 export const ContactForm = () => {
 
@@ -48,7 +48,7 @@ export const ContactForm = () => {
             body: JSON.stringify(formData)
         };
 
-        const response = await fetch('https://blooming-badlands-87075.herokuapp.com/emai', requestOptions).then((res) => {
+        const response = await fetch('https://blooming-badlands-87075.herokuapp.com/email', requestOptions).then((res) => {
             if (res.ok)
                 return (res.json())
             else
@@ -69,15 +69,18 @@ export const ContactForm = () => {
             setsendClick(true);
             setLoading(false);
 
+            /*
             setTimeout(() => {
                 document.getElementById("messageBoxWrap").classList.add("boxShow")
-            }, 10) 
+            }, 10)
+            */
+ 
         })
     }
 
     return (
         <div id="ContactForm" className={((visible===true)? "visible":"hide")} ref={containerRef}>
-            <h1 className="Title">send me A message</h1>
+            <h1 className="Title">send me A <AiFillMessage className="messageIcon"></AiFillMessage><span className="type">message</span></h1>
             <div className="formWrap">
                 <form id="formToSubmit" onSubmit={(e) => {submitForm(e)}}>
                     <div className="formPart">

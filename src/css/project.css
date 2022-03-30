@@ -1,5 +1,5 @@
 .projectWrap {
-    margin: 0 1rem 3.75rem 0;
+    margin: 0 1rem 0 0;
     width: 25rem;
     height: 30rem;
     max-width: 100%;
@@ -8,13 +8,22 @@
     background-color: var(--projectBackColor);
     padding: 0.625em;
     border-radius: 0.625rem;
+    flex-shrink: 0;
+}
+
+.projectWrap.comingSoon {
+    background-color: #0d1f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999999;
 }
 
 .projectWrap.visible {
     opacity: 1;
 }
 
-.projectWrap:nth-child(2) {
+.projectWrap:last-child {
     margin-bottom: 1.875rem;
 }
 
@@ -89,6 +98,8 @@
     flex-grow: 1;
     overflow-y: auto;
     opacity: 0.3;
+
+    scrollbar-width: thin !important;
 }
 
 .projectOverview::-webkit-scrollbar {
@@ -97,23 +108,25 @@
   
 /* Track */
 .projectOverview::-webkit-scrollbar-track {
-    background: #134f5c;
+    background: var(--scroll-track);
+    border-radius: 1rem;
 }
 
 /* Handle */
 .projectOverview::-webkit-scrollbar-thumb {
-    background: #f3f6f4;
+    background: var(--scroll-thumb);
+    border-radius: 1rem;
 }
 
 /* Handle on hover */
 .projectOverview::-webkit-scrollbar-thumb:hover {
-    background: #eeeeee;
+    background: var(--scroll-thumb-hover);
 }
 
 .projectOverview > p {
-    line-height: 2rem;
+    line-height: var(--line-height-text);
     color: #444444;
-    font-size: 0.75rem;
+    font-size: var(--font-size-text);
 }
 
 /*
@@ -227,7 +240,67 @@
     color: #247749;
 }
 
+.comingSoonTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30%;
+    margin-bottom: 3rem;
+    width: 100%;;
+}
+
+.comingSoonBar {
+    position: absolute;
+    content: "";
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    height: 0.3rem;
+    background-color: #999999;
+    overflow: hidden;
+}
+
+.comingSoonBar::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(45deg, black, #15314a);
+    background-size: 200% 200%;
+    width: var(--width);
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: progress 5s infinite;
+}
+
+@keyframes progress {
+    from {
+        background-position: 50% 50%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}
+
+.comingSoonSkills {
+    display: flex;
+    align-items: flex-start;
+}
+
+.comingSoonSkill {
+    padding: 0.625rem;
+    border: 1px solid #134f5c;
+    border-radius: 1rem;
+}
+
 @media screen and (max-width: 700px){
+    .projectWrap {
+        margin: 0 1rem 2.5rem 0;
+    }
+
     .projectOverview > p {
         line-height: 1.75rem;
     }

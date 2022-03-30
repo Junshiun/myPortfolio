@@ -17,19 +17,26 @@
   }
   
   .quote-box .button-box {
-    margin: 0 0 2rem 0;
-    display: block;
+    margin: 0 0 1rem 0;
+    display: flex;
+    width: 100%;
   }
   
   #tweet-quote {
+    display: flex;
     margin-left: 2rem;
-    font-size: 1.875rem;
     cursor: pointer;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  #tweet-quote > svg {
+    font-size: 1.5rem;
   }
   
   #new-quote {
     float: right;
-    margin-right: 3rem;
+    margin-right: 2rem;
     color: white;
     border-radius: 2px;
     border: none;

@@ -62,6 +62,30 @@
     display: flex;
     width: 100%;
     margin-left: 2rem;
+    overflow-x: auto;
+    margin-bottom: 2.5rem;
+    scrollbar-width: thin !important;
+}
+
+.projectHighlight::-webkit-scrollbar {
+    height: 0.5rem;
+}
+  
+/* Track */
+.projectHighlight::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+    border-radius: 1rem;
+}
+
+/* Handle */
+.projectHighlight::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+.projectHighlight::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover);
 }
 
 @media screen and (max-width: 700px){
@@ -70,5 +94,6 @@
         width: fit-content;
         max-width: 100%;
         margin: 0;
+        overflow: hidden;
     }
 }

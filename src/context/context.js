@@ -1,24 +1,45 @@
-/* not in use
-import { useContext, createContext, useReducer} from "react";
-import { stateReducer } from './reducer'
+import { useContext, createContext, useEffect, useState} from "react";
 
-export const visible = createContext();
+export const content = createContext();
 
 export const Context = ({children}) => {
 
-    const [state, statedispatch] = useReducer(stateReducer, {
-        me: false, 
-        you: false
-    })
+    const [loadingState, setLoadingState] = useState(true);
+
+    const [contentState, setContentState] = useState({
+        head: "",
+        aboutMe: "",
+        mainProjects: "",
+        smallProjects: "",
+        resume: ""
+    });
+
+    useEffect(() => {
+
+        let data = async() => {
+            await fetch("https://junshiun.github.io/jsonFiles/myPortfolio.json").then(res => res.json()).then(res => {
+                setContentState({
+                    head: res.head,
+                    aboutMe: res.aboutMe,
+                    mainProjects: res.mainProjects,
+                    smallProjects: res.smallProjects,
+                    resume: res.resume
+                })
+            });
+            setLoadingState(false);
+        }
+
+        data();
+
+    }, [])
 
     return (
-        <visible.Provider value={{state, statedispatch}}>
+        <content.Provider value={{contentState, loadingState}}>
             {children}
-        </visible.Provider>
+        </content.Provider>
     )
 }
 
-export const VisibleContext = () => {
-    return useContext(visible)
+export const ContentContext = () => {
+    return useContext(content)
 }
-*/

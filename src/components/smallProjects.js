@@ -3,7 +3,8 @@ import { Calculator } from "./calculator";
 import { Drum } from "./drum";
 import '../css/smallProjects.css'
 import { SmallProject } from "./smallProject";
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import { ContentContext } from "../context/context";
 
 const projects = [
     {
@@ -27,6 +28,8 @@ const projects = [
 ]
 
 export const SmallProjects = () => {
+
+    const { contentState: {smallProjects}} = ContentContext();
 
     const [showMore, setShowMore] = useState(false);
 
@@ -55,9 +58,9 @@ export const SmallProjects = () => {
         <div className="smallProjects">
             <div className={"smallProjectsWrap " + ((showMore===true)? "show" : "hide")}>
                 <div className="smallProjectsHeight">
-                    {projects.map((project) => {
+                    {smallProjects.map((project, index) => {
                     
-                        return <SmallProject component={project.component} key={project.title} project={project}/>
+                        return <SmallProject component={projects[index].component} key={project.Title} project={project}/>
                     })}
                 </div>
             </div>

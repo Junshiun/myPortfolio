@@ -3,7 +3,7 @@ import { useRef, useState, useEffect} from "react";
 
 export const SmallProject = (props) => {
 
-    const {component, project: {title, skills, github}} = props;
+    const {component, project: {Title, Skills, Github}} = props;
 
     const Project = component;
 
@@ -28,7 +28,7 @@ export const SmallProject = (props) => {
             <div className="smallProjectLink">
                 <a className="emptyBox">
                 </a>
-                <a className="gitBox" href={github} target="_blank">
+                <a className="gitBox" href={Github} target="_blank">
                     <VscGithub style={{marginRight: "10px"}}></VscGithub>GitHub
                 </a>
             </div>
@@ -36,10 +36,10 @@ export const SmallProject = (props) => {
     }
 
     return (
-        <div id={title} className={"smallProject " + ((visible===true)? "visible":"notvisible")} ref={containerRef}>
+        <div id={Title} className={"smallProject " + ((visible===true)? "visible":"notvisible")} ref={containerRef}>
             <div className="smallProjectHead">
-                <span className="smallProjectTitle">{title}</span>
-                {skills.map((skill) => {
+                <span className="smallProjectTitle">{Title}</span>
+                {Skills.map((skill) => {
                     return <div className="eachSkill" key={skill}>{skill}</div>
                 })}
 

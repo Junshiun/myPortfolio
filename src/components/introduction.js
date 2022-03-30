@@ -4,10 +4,13 @@ import { useState } from "react"
 import { IoMdHand } from "react-icons/io"
 
 import { useEffect } from "react"
+import { ContentContext } from "../context/context"
 
-const skills = ["JavaScript", "HTML", "CSS", "React", "Git", "Photoshop", "Illustrator"]
+//const skills = ["JavaScript", "HTML", "CSS", "React", "Git", "Photoshop", "Illustrator"]
 
 export const Introduction = () => {
+
+    const { contentState: {head: {Intro, Skills}} } = ContentContext();
 
     const [animation, setAnimation] = useState(true);
     
@@ -48,11 +51,11 @@ export const Introduction = () => {
                 <div className="aboutMeMain">
                     <div className="aboutMeWrap">
                         <div className="shortIntro">
-                             Currently living in KL, Malaysia. A lifelong learner with passion in programming.
+                             {Intro}
                         </div>
                         <div className="mySkills">
                             <span>my skills</span>
-                            {skills.map((skill) => {
+                            {Skills.map((skill) => {
                                 return (
                                     <div className="eachMySkill" key={skill}>{skill}</div>
                                 )
