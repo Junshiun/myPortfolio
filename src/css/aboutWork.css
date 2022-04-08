@@ -1,0 +1,83 @@
+.work {
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.625rem;
+    height: 100%;
+    transform: translatex(0%);
+    transition: transform 1s ease-out;
+}
+
+.work > h1 {
+    font-size: .9rem;
+    font-weight: bold;
+    color: #101b32;
+    opacity: 0.9;
+}
+
+.workWrap {
+    width: 100%;
+    height: calc(100% - 2.5rem);
+    background-color: white;
+    overflow-y: auto;
+    padding-right: 0.625rem;
+    color: #999999;
+
+    scrollbar-width: thin !important;
+}
+
+.workWrap::-webkit-scrollbar {
+    width: 0.3125rem;
+}
+  
+/* Track */
+.workWrap::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+}
+
+/* Handle */
+.workWrap::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+.workWrap::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover);
+    border-radius: 1rem;
+}
+
+.workWrap h2 {
+    margin-bottom: 0;
+}
+
+.workWrap .period {
+    font-size: 0.7rem;
+}
+
+.workWrap .eachWork {
+    margin-bottom: 2rem;
+}
+
+.workWrap span {
+    display: block;
+    line-height: var(--line-height-text);
+    font-size: var(--font-size-text);
+}
+
+.workWrap ul {
+    padding-left: 1rem;
+}
+
+.workWrap li {
+    line-height: var(--line-height-text);
+    font-size: var(--font-size-text);
+}
+
+/*
+.workWrap .workDetail::before {
+    content: "-";
+    margin-right: 0.5rem;
+}
+*/
+

@@ -55,7 +55,7 @@ export const Project = (props) => {
                 <div className="comingSoonBar" style={progress}>
                 </div>
             </div>
-            <div className="commingSoonSkills">
+            <div className="comingSoonSkills">
                 {project.Skills.map((skill) => {
                     return (
                         <div className="comingSoonSkill" key={project.Title + "-skills-" + skill}>
@@ -64,6 +64,13 @@ export const Project = (props) => {
                     )
                 })}
             </div>
+            {(project.Live === "")?
+            <div></div>
+            :
+            <div className="comingSoonButton">
+                <a href={project.Live} target="_blank">Sneak Peek</a>
+            </div>
+            }
         </div>
         :
         <div id={project.Title} className={"projectWrap " + ((visible===true)? "visible":"hide")} ref={containerRef}>

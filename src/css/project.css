@@ -248,6 +248,7 @@
     height: 30%;
     margin-bottom: 3rem;
     width: 100%;;
+    font-size: 1rem;
 }
 
 .comingSoonBar {
@@ -287,13 +288,37 @@
 
 .comingSoonSkills {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: fit-content;
 }
 
 .comingSoonSkill {
     padding: 0.625rem;
     border: 1px solid #134f5c;
     border-radius: 1rem;
+    margin: 0 1rem 1rem 0;
+    font-size: 0.625rem;
+}
+
+.comingSoonButton {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding-bottom: 0.625rem;
+}
+
+.comingSoonButton > a {
+    text-decoration: none;
+    border: solid 1px #999999;
+    padding: 0.675rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: #999999;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 700px){
