@@ -1,124 +1,129 @@
 :root {
-    --forStroke: white;
+  --forStroke: white;
 }
 
 #AboutMe {
-    position: relative;
-    padding: 1rem;
+  position: relative;
+  padding: 1rem;
 }
 
 #AboutMe::before {
-    position: absolute;
-    background-color: #0d1f2f;
-    z-index: -1;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  background-color: #0d1f2f;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 #AboutMe .Title {
-    color: #999999;
+  color: #999999;
 }
 
 .aboutWrap {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 0 1rem 1rem 1rem;
-    height: 18rem;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem 1rem 1rem;
+  height: 18rem;
+  overflow: hidden;
 }
 
 .infoBox {
-    position: relative;
-    display: flex;
-    width: 34rem;
-    max-width: 100%;
-    height: 100%;
+  position: relative;
+  display: flex;
+  width: 34rem;
+  max-width: 100%;
+  height: 100%;
 }
 
 .infoBox > .hide {
-    width: 0;
-    padding: 0;
-    transform: translateX(100%);
-    overflow: hidden;
+  width: 0;
+  padding: 0;
+  transform: translateX(100%);
+  overflow: hidden;
 }
 
 .aboutNav,
 .aboutNavMobile {
-    position: absolute;
-    left: -9rem;
-    top: 0;
-    bottom: 0;
-    padding: 0.7rem;
-    height: fit-content;
-    margin-top: auto;
-    margin-bottom: auto;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 2rem;
+  position: absolute;
+  left: -9rem;
+  top: 0;
+  bottom: 0;
+  padding: 0.7rem;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
 }
 
 .aboutNav .aboutNavIconBox,
 .aboutNavMobile .aboutNavIconBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: black;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
 .aboutNav .aboutNavIconBox:hover,
 .aboutNavMobile .aboutNavIconBox:hover {
-    background-color: #45818e;
+  background-color: #45818e;
 }
 
 .aboutNav > .aboutNavIconBox:not(:last-child) {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .aboutNavIconBox > .aboutNavIcon {
-    font-size: 1.1rem;
-    background-color: transparent;
-    color: #45818e;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: #45818e;
 }
 
 .aboutNav .aboutNavIconBox:hover > .aboutNavIcon,
-.aboutNavMobile .aboutNavIconBox:hover > .aboutNavIcon{
-    color: black;
+.aboutNavMobile .aboutNavIconBox:hover > .aboutNavIcon {
+  color: black !important;
+}
+
+.aboutNav .aboutNavIconBox.active > .aboutNavIcon,
+.aboutNavMobile .aboutNavIconBox.active > .aboutNavIcon {
+  color: #a2c4c9;
 }
 
 .aboutNavMobile {
-    display: none;
+  display: none;
 }
 
-@media screen and (max-width: 800px){
-    .aboutWrap {
-        padding: 0 0 5rem 0;
-    }
+@media screen and (max-width: 800px) {
+  .aboutWrap {
+    padding: 0 0 5rem 0;
+  }
 
-    .aboutNav {
-        display: none;
-    }
+  .aboutNav {
+    display: none;
+  }
 
-    .aboutNavMobile {
-        display: flex;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto 0 auto;
-        top: unset;
-        bottom: 0;
-        padding: 0.7rem;
-        width: fit-content;
-    }
-    
-    .aboutNavMobile > .aboutNavIconBox:not(:last-child) {
-        margin-right: 1.5rem;
-        margin-bottom: unset;
-    }
+  .aboutNavMobile {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 auto;
+    top: unset;
+    bottom: 0;
+    padding: 0.7rem;
+    width: fit-content;
+  }
+
+  .aboutNavMobile > .aboutNavIconBox:not(:last-child) {
+    margin-right: 1.5rem;
+    margin-bottom: unset;
+  }
 }
